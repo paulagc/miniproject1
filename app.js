@@ -1,17 +1,27 @@
 const express = require("express");
+const router = require("./router");
+const mongoose = require("mongoose");
+require("dotenv").config();
 const app = express();
-const port = 3000;
+const port = 8000;
 
-app.use(express.static(__dirname + "/public"));
+mongoose
+  .connect(process.env.DB_KEY, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
-});
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+app.use(router);
 
-app.post("/tasks", (req, res) => {
-  console.log("Task received");
+app.listen(port, async () => {
+  console.log(`server up on port ${port}`);
 });

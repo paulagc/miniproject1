@@ -2,10 +2,10 @@
   "name": "miniproject1",
   "version": "1.0.0",
   "description": "Miniproject 1 for Modern Software Development at JAMK",
-  "main": "app.js",
+  "main": "./app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "dev": "nodemon ./app.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/paulagc/miniproject1#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.7.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
