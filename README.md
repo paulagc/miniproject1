@@ -1,2 +1,8 @@
-# miniproject1
-Miniproject 1 for Modern Software Development at JAMK
+# Miniproject1
+This repository contains the "Miniproject 1" of Paula González Carbajal for the Modern Software Development course at JAMK.
+The project is a tutorial app of the use of Express.js framework
+
+## How to install
+- To run locally clone the project and install through `npm install` command, then run with `npm run dev`
+
+It is necesary to set up an env file with DB_KEY to connect to the database (connection string from MongoDB cloud)
