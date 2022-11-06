@@ -11,8 +11,8 @@ const getTasks = (req, res) => {
 
 const createTask = (req, res) => {
   const newTask = new Task({
-    name: req.body.name,
-    task: req.body.task,
+    assignedTo: req.body.assignedTo,
+    description: req.body.description,
   });
 
   newTask.save((err, task) => {
@@ -34,8 +34,8 @@ const editTask = (req, res) => {
     { _id: req.params.taskID },
     {
       $set: {
-        name: req.body.name,
-        task: req.body.task,
+        assignedTo: req.body.assignedTo,
+        description: req.body.description,
       },
     },
     { new: true },

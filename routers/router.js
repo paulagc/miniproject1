@@ -4,10 +4,10 @@ const {
   createTask,
   deleteTask,
   editTask,
-} = require("./controllers/task");
+} = require("../controllers/task");
 
 router.get("/", (req, res) => {
-  res.send("Let's build a CRUD API!");
+  res.send("Welcome to task manager");
 });
 
 router.get("/tasks", getTasks);
