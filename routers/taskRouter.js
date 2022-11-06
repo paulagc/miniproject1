@@ -1,10 +1,14 @@
+/* 
+TaskRouter.js
+Defines task endpoints (CRUD)that respond to the client requests
+*/
 const router = require("express").Router();
 const {
   getTasks,
   createTask,
   deleteTask,
   editTask,
-} = require("../controllers/task");
+} = require("../controllers/taskController");
 
 router.get("/", (req, res) => {
   res.send("Welcome to task manager");

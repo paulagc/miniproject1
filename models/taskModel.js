@@ -1,3 +1,7 @@
+/* 
+TaskModel.js
+Defines the squema or data abstraction of what a Task is in MongoDB database
+*/
 const mongoose = require("mongoose");
 
 const taskSchema = new mongoose.Schema({

@@ -1,4 +1,8 @@
-const Task = require("../models/task");
+/* 
+TaskController.js
+Forwards the requests of the router to the correct controller functions
+*/
+const Task = require("../models/taskModel");
 
 const getTasks = (req, res) => {
   Task.find((err, tasks) => {
